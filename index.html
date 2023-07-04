@@ -21,45 +21,36 @@
       color: white;
       background-color: blue;
     }
-
   </style>
-
-  </head>
-  
+</head> 
 <body>
-
     <div>
       <a href="#">Home</a>
       <a href="#">News</a>
       <a href="#">Contact</a>
       <a href="#">About</a>         
-      </a>
     </div>  
-
     <div class="container">
-      <img width=400 src="img/robots_work.webp" alt="Snow" style="width:100%;">
-      
+      <img id="myImage" width=400 src="img/robots_work.webp" alt="Snow" style="width:100%;">     
+    </div>
+    <h1>Friends!</h1>
+    <h2>Robots love to play too!</h2>  
+    <img width=780 src="img/IMG_0117.JPEG" alt="two friends" style="width:100%;">   
+    <div class="center">   
+      <button class="button" onclick="changeImage()">Play</button>      
     </div>
 
-     <h1>Friends!</h1>
-     <h2>Robots love to play too!</h2>
-
-   
-    <img width=780 src="img/IMG_0117.JPEG" alt="two friends" style="width:100%;">
-    
-    <div class="center">
-    
-      <button class="button">Play</button>
-    </div>
-
-  <ul>
-    <ol type="I" /ol>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Product</a></li>
-    <li><a href="#">Pricing</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-</ul>
-</ol>
+    <script>
+      function changeImage() {
+        var image = document.getElementById('myImage');
+        if (image.src.endsWith('robots_work.webp')) {
+          image.src = 'img/terminator.jpg'; // Замени путь на путь к другой картинке
+          image.alt = 'Another Image'; // Замени текст на желаемый
+        } else {
+          image.src = 'img/robots_work.webp';
+          image.alt = 'Snow';
+        }
+      }
+    </script>
 </body>
 </html>
