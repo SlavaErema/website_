@@ -35,20 +35,21 @@
     </div>
     <h1>Friends!</h1>
     <h2>Robots love to play too!</h2>  
-    <img width=780 src="img/IMG_0117.JPEG" alt="two friends" style="width:100%;">   
+    <img id="secondaryImage" width=780 src="img/IMG_0117.JPEG" alt="two friends" style="width:100%;">   
     <div class="center">   
       <button class="button" onclick="changeImage()">Play</button>      
     </div>
 
     <script>
       function changeImage() {
-        var image = document.getElementById('myImage');
-        if (image.src.endsWith('robots_work.webp')) {
-          image.src = 'img/terminator.jpg'; // Замени путь на путь к другой картинке
-          image.alt = 'Another Image'; // Замени текст на желаемый
+        var secondaryImage = document.getElementById('secondaryImage');
+        
+        if (secondaryImage.src.endsWith('IMG_0117.JPEG')) {
+          secondaryImage.src = 'img/terminator.jpg';
+          secondaryImage.alt = 'Another Image';
         } else {
-          image.src = 'img/robots_work.webp';
-          image.alt = 'Snow';
+          secondaryImage.src = 'img/IMG_0117.JPEG';
+          secondaryImage.alt = 'two friends';
         }
       }
     </script>
